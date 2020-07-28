@@ -1,0 +1,7 @@
+-----------------------------------INVOICE---------------------------------------
+productID------productname-----------------------rate----------quantity--------totalrate----
+111            pathanjali biscuit                10             5              50.0
+2              mariegold                         20             4              80.0
+3              goodaybiscuit                     10             4              40.0
+
+                                                                        total :170.0

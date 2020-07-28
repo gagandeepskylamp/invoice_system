@@ -1,0 +1,48 @@
+package File;
+import java.util.*;
+import java.io.*;
+
+public class customer{
+ String unqcode,name,rate,quantity, totalrate;
+ public void addquantity(String q){
+ quantity=q;
+ }
+  public void printconsole(){
+  System.out.println(unqcode);
+  System.out.println(name);
+  System.out.println(rate);
+  System.out.println(quantity);
+  }
+  public void cal(){
+   int inum = Integer.parseInt(rate);
+   int quant = Integer.parseInt(quantity);
+   double totalrated = inum*quant;
+    totalrate=String.valueOf(totalrated);
+   }
+   public void printtofile()throws IOException {
+        
+        void printspace(int a , String b){
+         int i,l;
+         l =a-b.length();
+        String u=" ";
+        for(i=0;i<l;i++)
+        out.write(u.getBytes());
+        }        
+        FileOutputStream out = new FileOutputStream("output.txt");
+        
+        out.write(unqcode.getBytes());
+        printspace(5,unqcode);
+        
+        
+        out.write(name.getBytes());
+        printspace(15,unqcode);
+        
+        out.write(rate.getBytes());
+        printspace(5,unqcode);
+        out.write(quantity.getBytes());
+        printspace(4,unqcode);        
+        out.write(totalrate.getBytes());
+        out.close();
+   
+   }
+  }
